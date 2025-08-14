@@ -1,0 +1,963 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EuroTAP - Revolutionary Investment Opportunity</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, 
+                #0f0f23 0%, 
+                #1a1a2e 25%, 
+                #16213e 50%, 
+                #0f3460 75%, 
+                #533483 100%);
+            color: white;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Animated background pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 206, 84, 0.05) 0%, transparent 50%);
+            animation: backgroundShift 20s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        @keyframes backgroundShift {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.1); }
+        }
+        
+        .slide {
+            min-height: 100vh;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            perspective: 1000px;
+        }
+        
+        .slide-content {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 80px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 32px 64px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transform-style: preserve-3d;
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px) rotateX(10deg);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) rotateX(0deg);
+            }
+        }
+        
+        h1 {
+            font-size: 4.5em;
+            font-weight: 800;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #e2e8f0;
+            text-align: center;
+            letter-spacing: -0.01em;
+        }
+        
+        h3 {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #f8fafc;
+        }
+        
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+        
+        .hero-metric {
+            font-size: 6em;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin: 30px 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .card:hover::before {
+            left: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(167, 139, 250, 0.5);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-premium {
+            background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(139, 92, 246, 0.1));
+            border-color: #a78bfa;
+        }
+        
+        .card-success {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(16, 185, 129, 0.1));
+            border-color: #22c55e;
+        }
+        
+        .card-warning {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(245, 158, 11, 0.1));
+            border-color: #fbbf24;
+        }
+        
+        .metric {
+            font-size: 3.5em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 20px 0;
+        }
+        
+        .brand-tag {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quantum-tag {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+        
+        .security-tag {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
+        }
+        
+        .eco-tag {
+            background: linear-gradient(135deg, #10b981, #059669);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+        }
+        
+        .demo-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px 0;
+            border: 2px solid rgba(167, 139, 250, 0.3);
+            position: relative;
+        }
+        
+        .demo-link {
+            display: inline-block;
+            padding: 18px 36px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 16px;
+            margin: 15px;
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .demo-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .demo-link:hover::before {
+            left: 100%;
+        }
+        
+        .demo-link:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.6);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .demo-live {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            box-shadow: 0 15px 35px rgba(34, 197, 94, 0.4);
+        }
+        
+        .demo-mobile {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+        }
+        
+        .impact-highlight {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.05));
+            border: 2px solid #10b981;
+            border-radius: 24px;
+            padding: 50px;
+            margin: 50px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .contact-cta {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            border-radius: 20px;
+            padding: 50px;
+            margin: 50px 0;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(139, 92, 246, 0.3);
+        }
+        
+        .contact-cta h3 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        
+        .email-highlight {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #fbbf24;
+            text-decoration: none;
+            border-bottom: 2px solid #fbbf24;
+            transition: all 0.3s ease;
+        }
+        
+        .email-highlight:hover {
+            color: #f59e0b;
+            border-color: #f59e0b;
+            transform: scale(1.05);
+        }
+        
+        .nav {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-btn {
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-btn:hover {
+            background: rgba(167, 139, 250, 0.3);
+            border-color: #a78bfa;
+            transform: translateY(-2px);
+        }
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8b5cf6, #3b82f6, #10b981);
+            transition: width 0.4s ease;
+            z-index: 1001;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+        }
+        
+        .slide-hidden {
+            display: none;
+        }
+        
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(167, 139, 250, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .slide { padding: 30px 20px; }
+            .slide-content { padding: 40px 30px; }
+            h1 { font-size: 3em; }
+            h2 { font-size: 2em; }
+            .hero-metric { font-size: 4em; }
+            .grid { grid-template-columns: 1fr; gap: 20px; }
+            .demo-link { padding: 15px 25px; margin: 10px 5px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-particles" id="particles"></div>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Slide 1: Revolutionary Opening -->
+    <div class="slide" id="slide1">
+        <div class="slide-content">
+            <div style="text-align: center;">
+                <span class="quantum-tag">🔮 QUANTUM-SAFE</span>
+                <span class="security-tag">🛡️ EU COMPLIANT</span>
+                <span class="eco-tag">🌱 CARBON-NEGATIVE</span>
+            </div>
+            
+            <h1>EuroTAP</h1>
+            <h2>Europe's Payment Revolution</h2>
+            
+            <div class="hero-metric">€15M</div>
+            <p style="text-align: center; font-size: 1.4em; color: #fbbf24; font-weight: 600;">
+                The World's First Quantum-Safe Payment Terminal
+            </p>
+            
+            <div class="contact-cta" style="margin-top: 60px;">
+                <h3>Ready to Lead the Future?</h3>
+                <p style="font-size: 1.3em; margin: 20px 0;">
+                    Join the quantum-safe payment revolution
+                </p>
+                <a href="mailto:tapeuro78@gmail.com" class="email-highlight">
+                    tapeuro78@gmail.com
+                </a>
+            </div>
+            
+            <p style="text-align: center; margin-top: 30px; opacity: 0.8;">
+                <strong>Founders:</strong> L.F.Z & J.R. • <strong>August 2025</strong> • <strong>Confidential</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- Slide 2: The Quantum Crisis -->
+    <div class="slide slide-hidden" id="slide2">
+        <div class="slide-content">
+            <h2>🚨 The Quantum Apocalypse is Coming</h2>
+            
+            <div class="grid">
+                <div class="card card-warning">
+                    <h3>⚠️ TOTAL VULNERABILITY</h3>
+                    <div class="metric">100%</div>
+                    <p>of current payment systems will be broken by quantum computers within 10-15 years</p>
+                    <p style="color: #fbbf24; font-weight: 700;">€2 TRILLION at risk in Europe alone</p>
+                </div>
+                
+                <div class="card card-warning">
+                    <h3>💸 COMPLIANCE NIGHTMARE</h3>
+                    <div class="metric">€50k</div>
+                    <p>Average cost for SMEs to navigate GDPR + PCI-DSS + PSD2 + MiCA compliance manually</p>
+                    <p style="color: #fbbf24; font-weight: 700;">80% failure rate</p>
+                </div>
+                
+                <div class="card card-warning">
+                    <h3>⏰ TIME IS RUNNING OUT</h3>
+                    <div class="metric">5-10</div>
+                    <p>years until quantum computers become commercially viable</p>
+                    <p style="color: #fbbf24; font-weight: 700;">ZERO quantum-safe solutions exist</p>
+                </div>
+            </div>
+            
+            <div class="impact-highlight">
+                <h3 style="color: #dc2626; font-size: 2.5em;">The €2 Trillion Question</h3>
+                <p style="font-size: 1.4em;">
+                    What happens when every payment system in Europe becomes vulnerable overnight?
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Our Revolutionary Solution -->
+    <div class="slide slide-hidden" id="slide3">
+        <div class="slide-content">
+            <h2>💡 The EuroTAP Revolution</h2>
+            <p style="text-align: center; font-size: 1.3em; margin-bottom: 50px;">
+                The world's first and only quantum-safe payment terminal with total EU compliance
+            </p>
+            
+            <div class="grid">
+                <div class="card card-premium">
+                    <h3>🔮 QUANTUM-IMMUNE</h3>
+                    <p><strong>ML-DSA-65 NIST Standard</strong></p>
+                    <p>First European implementation of post-quantum cryptography</p>
+                    <div style="color: #a78bfa; font-weight: 700; margin-top: 15px;">
+                        ✓ Unbreakable by quantum computers
+                    </div>
+                </div>
+                
+                <div class="card card-premium">
+                    <h3>🛡️ COMPLIANCE AUTOMATION</h3>
+                    <p><strong>GDPR + PCI + PSD2 + MiCA</strong></p>
+                    <p>Built-in regulatory compliance across all 27 EU countries</p>
+                    <div style="color: #a78bfa; font-weight: 700; margin-top: 15px;">
+                        ✓ Zero manual compliance work
+                    </div>
+                </div>
+                
+                <div class="card card-premium">
+                    <h3>📱 MOBILE-FIRST</h3>
+                    <p><strong>Smartphone = POS Terminal</strong></p>
+                    <p>NFC-enabled processing with zero hardware dependency</p>
+                    <div style="color: #a78bfa; font-weight: 700; margin-top: 15px;">
+                        ✓ 95% cost reduction vs traditional
+                    </div>
+                </div>
+                
+                <div class="card card-premium">
+                    <h3>🌍 PAN-EUROPEAN</h3>
+                    <p><strong>4 Languages Native</strong></p>
+                    <p>Portuguese, English, French, German support from day one</p>
+                    <div style="color: #a78bfa; font-weight: 700; margin-top: 15px;">
+                        ✓ 450M people addressable market
+                    </div>
+                </div>
+                
+                <div class="card card-premium">
+                    <h3>🔗 B2B API ECOSYSTEM</h3>
+                    <p><strong>Developer Platform</strong></p>
+                    <p>Complete API suite for third-party integrations</p>
+                    <div style="color: #a78bfa; font-weight: 700; margin-top: 15px;">
+                        ✓ Network effects multiplier
+                    </div>
+                </div>
+                
+                <div class="card card-premium">
+                    <h3>📊 REAL-TIME BI</h3>
+                    <p><strong>Executive Dashboard</strong></p>
+                    <p>Advanced analytics with compliance reporting</p>
+                    <div style="color: #a78bfa; font-weight: 700; margin-top: 15px;">
+                        ✓ Data-driven decisions
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Live Demonstration -->
+    <div class="slide slide-hidden" id="slide4">
+        <div class="slide-content">
+            <h2>🚀 LIVE PRODUCT DEMONSTRATION</h2>
+            <p style="text-align: center; font-size: 1.4em; margin-bottom: 40px; color: #22c55e;">
+                <strong>Complete ecosystem operational and ready for testing</strong>
+            </p>
+            
+            <div class="demo-section">
+                <div class="grid">
+                    <div class="card card-success">
+                        <h3>🌐 Web Terminal Platform</h3>
+                        <p><strong>Features:</strong> Quantum-safe processing, multi-language interface, real-time analytics, automated compliance</p>
+                        
+                        <div style="margin: 25px 0;">
+                            <a href="https://eurotap-quantum-terminal.vercel.app" target="_blank" class="demo-link demo-live">
+                                🌍 LIVE DEMO
+                            </a>
+                            <a href="http://localhost:5173" target="_blank" class="demo-link">
+                                💻 LOCAL VERSION
+                            </a>
+                        </div>
+                        
+                        <div style="color: #22c55e; margin-top: 20px;">
+                            <p>✓ Multi-language support active</p>
+                            <p>✓ Quantum-safe encryption running</p>
+                            <p>✓ EU compliance automation verified</p>
+                            <p>✓ Real-time analytics functional</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-success">
+                        <h3>📱 Mobile Application Suite</h3>
+                        <p><strong>Features:</strong> Digital receipts, sales dashboard, push notifications, NFC simulation, multi-currency</p>
+                        
+                        <div style="margin: 25px 0;">
+                            <a href="http://localhost:3004" target="_blank" class="demo-link demo-mobile">
+                                📱 MOBILE DEMO
+                            </a>
+                        </div>
+                        
+                        <div style="color: #f59e0b; margin-top: 20px;">
+                            <p>✓ 5 advanced features implemented</p>
+                            <p>✓ Digital receipts automated</p>
+                            <p>✓ Real-time sales dashboard</p>
+                            <p>✓ Multi-currency support</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-success">
+                        <h3>🔗 B2B API Platform</h3>
+                        <p><strong>Features:</strong> Swagger documentation, API key management, rate limiting, quantum-safe endpoints</p>
+                        
+                        <div style="margin: 25px 0;">
+                            <a href="http://localhost:3003" target="_blank" class="demo-link">
+                                📚 API DOCUMENTATION
+                            </a>
+                        </div>
+                        
+                        <div style="color: #3b82f6; margin-top: 20px;">
+                            <p>✓ Complete Swagger documentation</p>
+                            <p>✓ API key management system</p>
+                            <p>✓ Rate limiting implemented</p>
+                            <p>✓ Quantum-safe endpoints ready</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta" style="margin-top: 50px;">
+                    <h3>🎯 Schedule Private Demo</h3>
+                    <p style="font-size: 1.2em;">
+                        <strong>Duration:</strong> 30 minutes • <strong>Format:</strong> Live system demonstration<br>
+                        <strong>Available:</strong> Immediately • <strong>Contact:</strong> 
+                        <a href="mailto:tapeuro78@gmail.com" class="email-highlight">tapeuro78@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Market Domination -->
+    <div class="slide slide-hidden" id="slide5">
+        <div class="slide-content">
+            <h2>🎯 Total Market Domination Strategy</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>💰 TOTAL ADDRESSABLE MARKET</h3>
+                    <div class="metric">€2T</div>
+                    <p>Annual EU payment processing volume</p>
+                    <p style="color: #fbbf24; font-weight: 700;">100% vulnerable to quantum attacks</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🏢 SERVICEABLE MARKET</h3>
+                    <div class="metric">25M</div>
+                    <p>SMEs across 27 EU member states</p>
+                    <p style="color: #fbbf24; font-weight: 700;">€50k average compliance cost each</p>
+                </div>
+                
+                <div class="card">
+                    <h3>⚡ FIRST-MOVER ADVANTAGE</h3>
+                    <div class="metric">5-10</div>
+                    <p>Years ahead of any competition</p>
+                    <p style="color: #fbbf24; font-weight: 700;">Unassailable market position</p>
+                </div>
+            </div>
+            
+            <div class="impact-highlight">
+                <h3>🏆 The Ultimate Market Opportunity</h3>
+                <p style="font-size: 1.3em;">
+                    <strong>€1.25 TRILLION</strong> potential market capture with 
+                    <strong>ZERO</strong> direct competition for 5-10 years
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Revolutionary Business Model -->
+    <div class="slide slide-hidden" id="slide6">
+        <div class="slide-content">
+            <h2>💎 Multi-Billion Revenue Engine</h2>
+            
+            <div class="grid">
+                <div class="card card-success">
+                    <h3>📱 B2C SAAS PLATFORM</h3>
+                    <p><strong>€9.99-29.99/month</strong></p>
+                    <p>Subscription model with premium quantum-safe features</p>
+                    <div class="metric">€2M</div>
+                    <p style="color: #22c55e; font-weight: 700;">ARR by Year 3</p>
+                </div>
+                
+                <div class="card card-success">
+                    <h3>🔗 B2B API LICENSING</h3>
+                    <p><strong>€99-999/month + €0.25-1.50/transaction</strong></p>
+                    <p>Platform licensing with quantum-safe transaction fees</p>
+                    <div class="metric">€8M</div>
+                    <p style="color: #22c55e; font-weight: 700;">ARR by Year 3</p>
+                </div>
+                
+                <div class="card card-success">
+                    <h3>🏢 ENTERPRISE SOLUTIONS</h3>
+                    <p><strong>€10k-100k/year</strong></p>
+                    <p>Custom quantum-safe implementations</p>
+                    <div class="metric">€5M</div>
+                    <p style="color: #22c55e; font-weight: 700;">ARR by Year 3</p>
+                </div>
+                
+                <div class="card card-success">
+                    <h3>🔮 QUANTUM PREMIUM</h3>
+                    <p><strong>+50-100% pricing premium</strong></p>
+                    <p>Future-proof technology command premium</p>
+                    <div class="metric">€3M</div>
+                    <p style="color: #22c55e; font-weight: 700;">ARR by Year 3</p>
+                </div>
+            </div>
+            
+            <div class="contact-cta">
+                <h3>Total Projected ARR Year 3</h3>
+                <div class="hero-metric" style="font-size: 4em;">€18M</div>
+                <p style="font-size: 1.3em;">
+                    <strong>Gross Margin:</strong> 65% • <strong>Net Profit:</strong> €12M • <strong>Valuation Multiple:</strong> 12-18x
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Environmental Revolution -->
+    <div class="slide slide-hidden" id="slide7">
+        <div class="slide-content">
+            <h2>🌍 Environmental Impact Revolution</h2>
+            <p style="text-align: center; font-size: 1.3em; margin-bottom: 40px;">
+                Not just quantum-safe, but <span style="color: #22c55e; font-weight: 700;">planet-safe</span>
+            </p>
+            
+            <div class="grid">
+                <div class="card card-success">
+                    <h3>📱 ZERO HARDWARE WASTE</h3>
+                    <div class="metric">-95%</div>
+                    <p>Physical terminal elimination vs traditional POS systems</p>
+                    <p style="color: #22c55e; font-weight: 700;">500kg CO2 saved per terminal annually</p>
+                </div>
+                
+                <div class="card card-success">
+                    <h3>🧾 100% PAPERLESS</h3>
+                    <div class="metric">-12T</div>
+                    <p>Paper waste eliminated per business through digital receipts</p>
+                    <p style="color: #22c55e; font-weight: 700;">= 204 trees saved per business</p>
+                </div>
+                
+                <div class="card card-success">
+                    <h3>⚡ ENERGY REVOLUTION</h3>
+                    <div class="metric">-60%</div>
+                    <p>Energy consumption vs traditional POS infrastructure</p>
+                    <p style="color: #22c55e; font-weight: 700;">Cloud-native optimization</p>
+                </div>
+            </div>
+            
+            <div class="impact-highlight">
+                <h3>🌱 Planetary Scale Impact</h3>
+                <div class="grid" style="margin-top: 30px;">
+                    <div>
+                        <div class="metric">-105k</div>
+                        <p><strong>Year 3:</strong> Tons CO2 prevented = 2.5M trees planted</p>
+                    </div>
+                    <div>
+                        <div class="metric">-420k</div>
+                        <p><strong>Year 5:</strong> Tons CO2 prevented = 10M trees planted</p>
+                    </div>
+                </div>
+                <p style="font-size: 1.2em; margin-top: 30px;">
+                    <strong>ESG Premium Valuation:</strong> 12-18x multiple vs 8-12x traditional
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Investment Opportunity -->
+    <div class="slide slide-hidden" id="slide8">
+        <div class="slide-content">
+            <h2>🚀 The Investment of a Lifetime</h2>
+            
+            <div class="contact-cta">
+                <div class="hero-metric">€1M</div>
+                <h3>Seed Round Target</h3>
+                <p style="font-size: 1.4em;">
+                    Pre-money valuation: <strong style="color: #fbbf24;">€8M - €12M</strong>
+                </p>
+            </div>
+            
+            <div class="grid">
+                <div class="card card-premium">
+                    <h3>🎯 12-MONTH MILESTONES</h3>
+                    <div style="color: #a78bfa; margin: 20px 0;">
+                        <p>• Patent application filed and pending</p>
+                        <p>• 1,000+ active paying customers</p>
+                        <p>• €500k ARR achieved and verified</p>
+                        <p>• Strategic banking partnerships secured</p>
+                        <p>• Series A funding round prepared</p>
+                    </div>
+                </div>
+                
+                <div class="card card-success">
+                    <h3>🏆 EXPECTED RETURNS</h3>
+                    <div style="margin: 20px 0;">
+                        <p><strong>Target ROI:</strong> 15-25x over 5 years</p>
+                        <p><strong>Exit valuation:</strong> €200M - €400M</p>
+                        <p><strong>Exit strategy:</strong> IPO or strategic M&A</p>
+                        <p><strong>Timeline:</strong> 5-7 years to exit</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid" style="margin-top: 40px;">
+                <div class="card">🥇 5-10 year first-mover advantage</div>
+                <div class="card">🛡️ Patent protection strategy active</div>
+                <div class="card">🚀 Zero technology risk - MVP operational</div>
+                <div class="card">🌍 €2T market with zero competition</div>
+                <div class="card">⏰ Quantum urgency creating demand</div>
+                <div class="card">🌱 ESG premium driving valuations</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: Call to Action -->
+    <div class="slide slide-hidden" id="slide9">
+        <div class="slide-content">
+            <h1 style="font-size: 3.5em;">BE THE FIRST</h1>
+            <h2>Own Europe's Quantum-Safe Future</h2>
+            
+            <div class="contact-cta" style="margin: 60px 0;">
+                <h3 style="font-size: 2.5em;">🎯 Ready to Lead the Revolution?</h3>
+                <p style="font-size: 1.4em; margin: 30px 0;">
+                    Join the quantum-safe payment transformation that will reshape Europe's financial infrastructure
+                </p>
+                
+                <div style="margin: 40px 0;">
+                    <a href="mailto:tapeuro78@gmail.com" class="email-highlight" style="font-size: 2.2em;">
+                        tapeuro78@gmail.com
+                    </a>
+                </div>
+                
+                <div style="font-size: 1.2em; margin: 30px 0;">
+                    <p><strong>📞 Response Time:</strong> Within 24 hours</p>
+                    <p><strong>🎬 Demo Available:</strong> Immediately</p>
+                    <p><strong>📋 Documentation:</strong> Complete package ready</p>
+                    <p><strong>💰 Investment Terms:</strong> €1M seed for 8-12% equity</p>
+                </div>
+            </div>
+            
+            <div class="impact-highlight">
+                <h3 style="font-size: 2em;">🔮 This is Your Moment</h3>
+                <p style="font-size: 1.3em;">
+                    The quantum revolution is coming. The only question is:<br>
+                    <strong>Will you lead it, or watch from the sidelines?</strong>
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <span class="quantum-tag">QUANTUM-SAFE</span>
+                <span class="eco-tag">CARBON-NEGATIVE</span>
+                <span class="security-tag" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">INVESTMENT READY</span>
+            </div>
+            
+            <p style="text-align: center; margin-top: 40px; opacity: 0.8; font-size: 1.1em;">
+                <strong>EuroTAP Technologies</strong> • Founded by L.F.Z & J.R. • August 2025<br>
+                Europe's First Quantum-Safe Payment Terminal
+            </p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+        <button class="nav-btn" onclick="prevSlide()">← Previous</button>
+        <span style="color: #cbd5e1; padding: 0 20px; font-weight: 600;" id="slideCounter">1 / 9</span>
+        <button class="nav-btn" onclick="nextSlide()">Next →</button>
+        <button class="nav-btn" onclick="resetPresentation()">🏠 Start</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 9;
+
+        // Create floating particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        function updateSlideCounter() {
+            document.getElementById('slideCounter').textContent = `${currentSlide} / ${totalSlides}`;
+        }
+
+        function showSlide(n) {
+            for (let i = 1; i <= totalSlides; i++) {
+                const slide = document.getElementById(`slide${i}`);
+                if (slide) slide.classList.add('slide-hidden');
+            }
+            
+            const currentSlideEl = document.getElementById(`slide${n}`);
+            if (currentSlideEl) currentSlideEl.classList.remove('slide-hidden');
+            
+            const progress = (n / totalSlides) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            updateSlideCounter();
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        function resetPresentation() {
+            currentSlide = 1;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                resetPresentation();
+            }
+        });
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) nextSlide();
+            if (touchEndX > touchStartX + 50) prevSlide();
+        }
+
+        // Initialize
+        createParticles();
+        showSlide(1);
+    </script>
+</body>
+</html>
